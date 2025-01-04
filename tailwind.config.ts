@@ -8,11 +8,15 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "background-gradient": "linear-gradient(to bottom, #EAEAEA 80%, #A9B6A2 100%)"
-      },
       colors: {
-        "main-color": "#A9B6A2"
+        "backgound-color": "#EAEAEA",
+        "main-color": "#A9B6A2",
+        "sec-green": "#9BA58D"
+      },
+      fontFamily: {
+        titleFont: 'var(--cinzel-decorative)',
+        secTitleFont: 'var(--cinzel)',
+        textFont: 'var(--crimson)'
       }
     },
   },

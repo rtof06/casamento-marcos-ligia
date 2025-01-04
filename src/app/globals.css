@@ -2,3 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+   .title {
+      @apply text-5xl py-2 font-secTitleFont
+   }
+
+   .simple-text {
+      @apply text-3xl font-textFont
+   }
+}
