@@ -34,11 +34,14 @@ export default function Header(): JSX.Element {
       ref={headerRef}
       className="fixed flex flex-col font-secTitleFont text-xl gap-2 p-4 items-start"
     >
-      <button onClick={toggleMenu} className="hover:opacity-70 transition-all">
+      <button onClick={toggleMenu} className="hover:opacity-70 transition-all text-4xl">
         ☰
       </button>
       {isOpen && (
-        <nav className="flex flex-col gap-2 bg-main-color p-4">
+        <nav className="flex flex-col gap-2 bg-main-color p-4 rounded-lg">
+          <Link href="/" className="hover:opacity-70 transition-all">
+            Início
+          </Link>
           <Link href="/infos-cerimonia" className="hover:opacity-70 transition-all">
             Informações da cerimônia
           </Link>
