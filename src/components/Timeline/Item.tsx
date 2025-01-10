@@ -24,8 +24,8 @@ export default function Item({ ano, titulo, img, texto, alt }: ItemProps) {
           <h1 className="font-secTitleFont font-normal text-2xl">{titulo}</h1>
           <h2 className="font-textFont">{ano}</h2>
         </div>
-        <div>
-          <Image src={img} alt={alt} />
+        <div className="flex flex-col items-center">
+          <Image src={img} alt={alt} className="w-96" />
           <p className="font-textFont">{texto}</p>
         </div>
       </TimelineContent>
