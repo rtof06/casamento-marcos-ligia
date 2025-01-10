@@ -7,7 +7,7 @@ import fotoNoivado from "@/public/img/foto-noivado.jpg"
 
 export default function CasalTimeline() {
   return (
-    <Timeline position="alternate">
+    <Timeline position="alternate-reverse">
       <TimelineItem>
         <Item titulo="Primeiro registro" ano="2006" img={fotoNamoro} alt="foto de várias crianças em um encontro onde mostra os dois" texto="Esta foto reprensenta o primeiro registro dos dois juntos."/>
       </TimelineItem>
