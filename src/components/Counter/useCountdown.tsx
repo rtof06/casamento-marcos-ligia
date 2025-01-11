@@ -2,10 +2,10 @@
 import { useState, useEffect } from "react";
 
 export default function useCountdown(date: string) {
-  const [day, setDay] = useState<number>(0);
-  const [hour, setHour] = useState<number>(0);
-  const [minute, setMinute] = useState<number>(0);
-  const [second, setSecond] = useState<number>(0);
+  const [day, setDay] = useState<string>("00");
+  const [hour, setHour] = useState<string>("00");
+  const [minute, setMinute] = useState<string>("00");
+  const [second, setSecond] = useState<string>("00");
 
   useEffect(() => {
     const countdown = () => {
@@ -24,10 +24,11 @@ export default function useCountdown(date: string) {
       const minuteNumber = Math.floor((interval % hour) / minute);
       const secondNumber = Math.floor((interval % minute) / second);
 
-      setDay(dayNumber);
-      setHour(hourNumber);
-      setMinute(minuteNumber);
-      setSecond(secondNumber);
+      // Format numbers to always have 2 digits
+      setDay(String(dayNumber).padStart(2, "0"));
+      setHour(String(hourNumber).padStart(2, "0"));
+      setMinute(String(minuteNumber).padStart(2, "0"));
+      setSecond(String(secondNumber).padStart(2, "0"));
     };
 
     const intervalId = setInterval(countdown, 1000);
