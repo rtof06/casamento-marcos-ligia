@@ -8,18 +8,20 @@ export const metadata: Metadata = {
   description: "Site do casamento do Marcos Paulo e Lígia Cavallari",
 };
 
-export const titleFontFamily = Cinzel_Decorative({
+// Definindo as fontes fora do export
+const titleFontFamily = Cinzel_Decorative({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--cinzel-decorative",
 });
 
-export const secTitleFontFamily = Cinzel({
+const secTitleFontFamily = Cinzel({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--cinzel",
 });
-export const textFontFamily = Crimson_Text({
+
+const textFontFamily = Crimson_Text({
   weight: ["400"],
   subsets: ["latin"],
   variable: "--crimson",
