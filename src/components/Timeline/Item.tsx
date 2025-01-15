@@ -7,7 +7,7 @@ import Image, { StaticImageData } from "next/image";
 interface ItemProps {
   ano: string;
   titulo: string;
-  img: StaticImageData;
+  img: string | StaticImageData;
   alt: string;
   texto: string;
 }

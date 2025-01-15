@@ -49,7 +49,7 @@ export default function Header(): JSX.Element {
       ) : (
         <header
           ref={headerRef}
-          className="fixed flex font-secTitleFont text-xl gap-2 items-start z-50 bg-main-color p-4"
+          className="fixed flex font-secTitleFont text-xl gap-2 h-screen items-start z-50 bg-main-color py-5 pl-4 pr-8 max-sm:w-full max-sm:h-auto"
         >
           <button
             onClick={toggleMenu}
@@ -57,25 +57,28 @@ export default function Header(): JSX.Element {
           >
             X
           </button>
-          <nav className="flex flex-col gap-2 ">
-            <Link href="/" className="hover:opacity-70 transition-all">
+          <nav className="flex flex-col h-screen justify-center gap-2 ">
+            <Link href="/" className="page" onClick={toggleMenu}>
               Início
             </Link>
             <Link
               href="/infos-cerimonia"
-              className="hover:opacity-70 transition-all"
+              className="page"
+              onClick={toggleMenu}
             >
               Informações da cerimônia
             </Link>
             <Link
               href="/#/historia-casal"
-              className="hover:opacity-70 transition-all"
+              className="page"
+              onClick={toggleMenu}
             >
               História do Casal
             </Link>
             <Link
               href="/#/lista-presentes"
-              className="hover:opacity-70 transition-all"
+              className="page"
+              onClick={toggleMenu}
             >
               Lista de Presentes
             </Link>

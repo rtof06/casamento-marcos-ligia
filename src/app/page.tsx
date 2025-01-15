@@ -1,5 +1,5 @@
 import Image from "next/image";
-import fotoMenu from "@/public/img/foto-ligia-marcso.jpeg";
+import fotoMenu from "../../public/img/foto-ligia-marcso.jpeg";
 import CasalTimeline from "@/components/Timeline/CasalTimeline";
 import Counter from "@/components/Counter/Counter";
 

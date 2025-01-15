@@ -1,9 +1,9 @@
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import Item from "./Item";
-import fotoNamoro from "@/public/img/foto-namoro.jpg"
-import fotoPedido from "@/public/img/foto-alianca-perto.jpeg"
-import fotoNoivado from "@/public/img/foto-noivado.jpg"
+import fotoNamoro from "../../../public/img/foto-namoro.jpg"
+import fotoPedido from "../../../public/img/foto-alianca-perto.jpeg"
+import fotoNoivado from "../../../public/img/foto-noivado.jpg"
 
 export default function CasalTimeline() {
   return (
