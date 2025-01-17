@@ -35,7 +35,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={`${secTitleFontFamily.variable} ${titleFontFamily.variable} ${textFontFamily.variable}`}
+      className={`${secTitleFontFamily.variable} ${titleFontFamily.variable} ${textFontFamily.variable} scroll-smooth`}
     >
       <body className="bg-background-gradient break-words">
         <Header />

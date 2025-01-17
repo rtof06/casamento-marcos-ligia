@@ -20,7 +20,7 @@ export default function Home() {
         <Counter />
       </div>
       <section>
-        <h1 className="title text-center">História do Casal</h1>
+        <h1 className="title text-center" id="historia-casal">História do Casal</h1>
         <CasalTimeline />
       </section>
     </div>

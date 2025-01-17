@@ -47,7 +47,7 @@ export default function infoCerimonia() {
         <h1 className="title py-5 text-center">Confirmação de presença</h1>
         <BuscaConvidados />
       </section>
-      <section className="text-center py-10">
+      <section className="text-center py-10" id="lista-presentes">
         <h1 className="title py-5">Lista de presentes</h1>
         <figure className="flex flex-col items-center">
           <a
