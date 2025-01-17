@@ -12,6 +12,6 @@
    }
 
    .page {
-      @apply hover:opacity-70 transition-all open:shadow-2xl shadow-backgound-color text-2xl
+      @apply hover:opacity-70 transition-all open:shadow-2xl shadow-backgound-color text-2xl max-sm:text-3xl
    }
 }

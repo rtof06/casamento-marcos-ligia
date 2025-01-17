@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <section className="flex justify-around items-center p-8 max-sm:flex-col h-screen">
-        <h1 className="font-titleFont text-6xl max-sm:text-center max-sm:text-7xl">
+        <h1 className="font-titleFont text-6xl max-sm:text-center max-sm:text-7xl max-sm:py-5">
           Marcos & Lígia
         </h1>
         <Image
