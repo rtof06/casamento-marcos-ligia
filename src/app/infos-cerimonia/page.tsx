@@ -3,7 +3,7 @@ import mapa from "../../../public/img/mapa.jpg";
 import rua from "../../../public/img/rua.jpg";
 import fotoPresente from "../../../public/img/presente.jpeg";
 import BuscaConvidados from "@/components/BuscaConvidados/BuscaConvidados";
-import AumentarImagem from "@/components/AumentarImagem/AumentarImagem";
+import AumentarImagem from "@/components/Aumentar/AumentarImagem";
 
 export default function infoCerimonia() {
   return (

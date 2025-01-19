@@ -3,17 +3,21 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import { StaticImageData } from "next/image";
-import AumentarImagem from "../AumentarImagem/AumentarImagem";
+import AumentarImagem from "../Aumentar/AumentarImagem";
 
 interface ItemProps {
   ano: string;
   titulo: string;
-  img: string | StaticImageData;
-  alt: string;
+  media: {
+    type: "image" | "video";
+    src: string | StaticImageData;
+    alt?: string;
+    poster?: string;
+  };
   texto: string;
 }
 
-export default function Item({ ano, titulo, img, texto, alt }: ItemProps) {
+export default function Item({ ano, titulo, media, texto }: ItemProps) {
   return (
     <>
       <TimelineSeparator>
@@ -26,7 +30,22 @@ export default function Item({ ano, titulo, img, texto, alt }: ItemProps) {
           <h2 className="font-textFont">{ano}</h2>
         </div>
         <div className="flex flex-col items-center text-center">
-          <AumentarImagem img={img} alt={alt} texto={texto} />
+          {media.type === "image" ? (
+            <AumentarImagem
+              img={media.src}
+              alt={media.alt || "Imagem"}
+              texto={texto}
+            />
+          ) : (
+            <video
+              controls
+              poster={media.poster || ""}
+              className="max-w-full h-auto rounded-lg shadow-lg w-4/6"
+            >
+              <source src={media.src as string} type="video/mp4" />
+              Seu navegador não suporta a reprodução de vídeos.
+            </video>
+          )}
           <p className="font-textFont px-10 py-2 max-md:px-0">{texto}</p>
         </div>
       </TimelineContent>

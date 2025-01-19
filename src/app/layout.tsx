@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Cinzel, Cinzel_Decorative, Crimson_Text } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Casamento Marcos & Lígia",
@@ -40,6 +41,7 @@ export default function RootLayout({
       <body className="bg-background-gradient break-words">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
