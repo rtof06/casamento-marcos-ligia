@@ -49,7 +49,7 @@ export default function Header(): JSX.Element {
       ) : (
         <header
           ref={headerRef}
-          className="fixed flex font-secTitleFont text-xl gap-2 h-screen items-start z-50 bg-main-color py-5 pl-4 pr-8 max-sm:w-full max-sm:h-full max-md:h-1/2"
+          className="fixed flex font-secTitleFont text-xl gap-2 h-screen items-start z-50 bg-main-color py-5 pl-4 pr-8 max-sm:w-full max-sm:h-auto max-md:h-1/2"
         >
           <button
             onClick={toggleMenu}
@@ -57,7 +57,7 @@ export default function Header(): JSX.Element {
           >
             X
           </button>
-          <nav className="flex flex-col h-screen justify-center gap-2 max-md:h-1/2 max-sm:h-5/6 max-sm:gap-6 max-sm:w-4/5">
+          <nav className="flex flex-col h-screen justify-center gap-4 max-md:h-1/2 max-sm:gap-6 max-sm:ml-5">
             <Link href="/" className="page" onClick={toggleMenu}>
               Início
             </Link>
@@ -67,6 +67,13 @@ export default function Header(): JSX.Element {
               onClick={toggleMenu}
             >
               Informações da cerimônia
+            </Link>
+            <Link
+              href="/infos-cerimonia/#confirmacao-presenca"
+              className="page"
+              onClick={toggleMenu}
+            >
+              Confirmação de Presença
             </Link>
             <Link
               href="/#historia-casal"

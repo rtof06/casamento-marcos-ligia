@@ -43,7 +43,7 @@ export default function infoCerimonia() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center">
+      <section className="flex flex-col justify-center items-center" id="confirmacao-presenca">
         <h1 className="title py-5 text-center">Confirmação de presença</h1>
         <BuscaConvidados />
       </section>
