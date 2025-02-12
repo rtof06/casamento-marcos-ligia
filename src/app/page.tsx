@@ -1,11 +1,17 @@
+"use client"
+
 import Image from "next/image";
 import fotoMenu from "../../public/img/foto-ligia-marcso.jpeg";
 import CasalTimeline from "@/components/Timeline/CasalTimeline";
 import Counter from "@/components/Counter/Counter";
+import {motion} from "framer-motion";
 
 export default function Home() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}>
       <section className="flex justify-around items-center p-8 max-sm:flex-col h-screen">
         <h1 className="font-titleFont text-6xl max-sm:text-center max-sm:text-7xl max-sm:py-5">
           Marcos & Lígia
@@ -23,6 +29,6 @@ export default function Home() {
         <h1 className="title text-center" id="historia-casal">História do Casal</h1>
         <CasalTimeline />
       </section>
-    </div>
+    </motion.div>
   );
 }
