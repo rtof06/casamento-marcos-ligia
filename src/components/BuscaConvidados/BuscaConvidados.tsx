@@ -84,7 +84,7 @@ export default function BuscaConvidados() {
 
   return (
     <div
-      className="flex flex-col items-center text-center bg-main-color py-8 px-36 max-md:px-14 rounded-2xl"
+      className="flex flex-col items-center text-center bg-main-color py-8 px-36 max-md:px-14 rounded-2xl text-white"
       onSubmit={handleConfirm}
     >
       <label htmlFor="nome" className="font-textFont text-2xl">

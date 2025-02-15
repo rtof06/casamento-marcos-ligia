@@ -11,7 +11,8 @@ const config: Config = {
       colors: {
         "backgound-color": "#EAEAEA",
         "main-color": "#A9B6A2",
-        "sec-green": "#9BA58D"
+        "sec-green": "#9BA58D",
+        "third-green": "#424740",
       },
       fontFamily: {
         titleFont: 'var(--cinzel-decorative)',
