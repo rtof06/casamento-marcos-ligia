@@ -37,7 +37,7 @@ export default function infoCerimonia() {
             <figure className="w-80 md:w-72 text-center max-md:flex max-md:flex-col max-md:items-center">
               <AumentarImagem img={rua} alt="Foto da rua" />
               <h2 className="text-xl font-textFont pt-4">
-                Henrique Restaurante
+                Henrique Restaurante - São Roque, SP
               </h2>
             </figure>
           </div>
@@ -51,7 +51,9 @@ export default function infoCerimonia() {
         <h1 className="title py-5 text-third-green">Lista de presentes</h1>
         <figure className="flex flex-col items-center">
           <a
-            href="[link mercado livre]"
+            href="https://www.mercadolivre.com.br/presentes/casamento-ligia-e-marcos-s6yvp"
+            target="__blank"
+            rel="noopener noreferrer"
             className="flex flex-col items-center bg-sec-green p-5 rounded-2xl hover:shadow-2xl transition-all"
           >
             <Image

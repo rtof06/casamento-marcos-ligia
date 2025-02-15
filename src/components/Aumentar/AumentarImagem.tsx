@@ -26,7 +26,7 @@ export default function AumentarImagem({ img, alt, texto }: ImageProps) {
         src={img}
         alt={alt}
         className={`cursor-pointer w-96 ${
-          destaque ? "w-3/5 m-10 max-sm:w-full max-sm:px-2 h-auto" : "rounded-xl max-md:96 hover:shadow-2xl transition-all duration-300"
+          destaque ? "w-[700px] m-10 max-sm:w-full max-sm:px-2 h-auto" : "rounded-xl max-md:96 hover:shadow-2xl transition-all duration-300 shadow-xl"
         }`}
         onClick={(e) => {
           e.stopPropagation();
