@@ -95,8 +95,8 @@ export default function BuscaConvidados() {
         name="nome"
         id="nome"
         value={nome}
-        onChange={(e) => setNome(e.target.value)}
-        className="p-2 rounded-md border-2 border-sec-green font-textFont w-full active:bg-backgound-color capitalize"
+        onChange={(e) => setNome(e.target.value.toUpperCase())}
+        className="p-2 rounded-md border-2 border-sec-green font-textFont text-black w-full"
       />
 
       <label htmlFor="chamadoPor" className="font-textFont text-2xl mt-4">
@@ -110,7 +110,7 @@ export default function BuscaConvidados() {
         maxLength={15}
         pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"
         onChange={handleChange}
-        className="p-2 rounded-md border-2 border-sec-green w-full"
+        className="p-2 rounded-md border-2 font-textFont text-xl border-sec-green text-black w-full"
       />
 
       <button
@@ -133,17 +133,14 @@ export default function BuscaConvidados() {
         </p>
       )}
       {mensagem.includes("confirmada") && (
-        <p className="font-textFont text-2xl">
-          Não foi redirecionado? Clique{" "}
           <a
             href={`https://wa.me/5511932773883?text=Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${nome}.`}
-            className="bg-green-600 rounded-lg p-1 text-white"
+            className="bg-red-500 rounded-lg p-3 font-secTitleFont text-white"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Aqui
+             Não foi redirecionado? Clique aqui!
           </a>
-        </p>
       )}
     </div>
   );

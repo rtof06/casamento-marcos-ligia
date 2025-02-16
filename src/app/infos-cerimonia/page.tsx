@@ -1,13 +1,19 @@
+'use client'
+
 import Image from "next/image";
 import mapa from "../../../public/img/mapa.jpg";
 import rua from "../../../public/img/rua.png";
 import fotoPresente from "../../../public/img/presente.jpeg";
 import BuscaConvidados from "@/components/BuscaConvidados/BuscaConvidados";
 import AumentarImagem from "@/components/Aumentar/AumentarImagem";
+import {motion} from 'framer-motion';
 
 export default function infoCerimonia() {
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}>
       <section className="flex flex-col justify-center items-center">
         <h1 className="title pt-10 pb-5 text-third-green text-center max-md:pt-20 max-md:pb-5 max-md:text-4xl">
           Informações da cerimônia
@@ -69,6 +75,6 @@ export default function infoCerimonia() {
           </a>
         </figure>
       </section>
-    </div>
+    </motion.div>
   );
 }

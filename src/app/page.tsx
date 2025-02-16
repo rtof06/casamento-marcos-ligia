@@ -5,6 +5,7 @@ import fotoMenu from "../../public/img/foto-ligia-marcso.jpeg";
 import CasalTimeline from "@/components/Timeline/CasalTimeline";
 import Counter from "@/components/Counter/Counter";
 import {motion} from "framer-motion";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,7 +28,11 @@ export default function Home() {
       </div>
       <section>
         <h1 className="title text-center text-third-green" id="historia-casal">História do Casal</h1>
+        <p className="font-secTitleFont text-center">(Toque na imagem para ampliar)</p>
         <CasalTimeline />
+      </section>
+      <section className="flex justify-center items-center m-10">
+        <Link href="/infos-cerimonia" className="bg-sec-green p-5 text-2xl text-center max-sm:text-lg rounded-xl text-white font-secTitleFont hover:bg-third-green transition-all" > Saiba mais informações sobre a cerimônia </Link>
       </section>
     </motion.div>
   );
