@@ -70,7 +70,7 @@ export default function BuscaConvidados() {
         const whatsAppMessage = `Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${encodeURIComponent(
           nome
         )}.`;
-        const whatsAppLink = `https://wa.me/5511932773883?text=${whatsAppMessage}`;
+        const whatsAppLink = `https://wa.me/5511930955052?text=${whatsAppMessage}`;
 
         window.open(whatsAppLink, "_blank");
 
