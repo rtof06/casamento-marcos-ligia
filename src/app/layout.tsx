@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { Cinzel, Cinzel_Decorative, Crimson_Text } from "next/font/google";
 import "./globals.css";
+import localFont from "next/font/local";
+import {Kodchasan} from "next/font/google";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 
@@ -10,22 +11,18 @@ export const metadata: Metadata = {
 };
 
 // Definindo as fontes fora do export
-const titleFontFamily = Cinzel_Decorative({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--cinzel-decorative",
+export const titleFontFamily = localFont({
+  src: "/fonts/Milan.ttf"
 });
 
-const secTitleFontFamily = Cinzel({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--cinzel",
+export const secTitleFontFamily = localFont({
+  src: "/fonts/Milan.ttf"
 });
 
-const textFontFamily = Crimson_Text({
-  weight: ["400"],
-  subsets: ["latin"],
-  variable: "--crimson",
+export const textFontFamily =  Kodchasan({
+  subsets: ['latin'],
+  weight: ['400'],
+  variable: '--textFont'
 });
 
 export default function RootLayout({
@@ -36,9 +33,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-br"
-      className={`${secTitleFontFamily.variable} ${titleFontFamily.variable} ${textFontFamily.variable} scroll-smooth`}
+      className={`scroll-smooth`}
     >
-      <body className="bg-background-gradient break-words">
+      <body className={`${textFontFamily.variable} bg-background-gradient break-words`}>
         <Header />
         {children}
         <Footer />

@@ -115,7 +115,7 @@ export default function BuscaConvidados() {
 
       <button
         onClick={handleConfirm}
-        className="flex items-center gap-2 rounded-2xl bg-sec-green p-3 mt-4 font-secTitleFont max-sm:font-semibold text-white hover:opacity-75 transition-all"
+        className="flex items-center gap-2 rounded-2xl bg-sec-green p-3 mt-4 font-textFont max-sm:font-semibold text-white hover:opacity-75 transition-all"
       >
         <Image src={whats} alt="Ícone do WhatsApp" className="w-8" />
         Confirmar presença

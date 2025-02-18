@@ -9,15 +9,15 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        "backgound-color": "#EAEAEA",
-        "main-color": "#A9B6A2",
-        "sec-green": "#9BA58D",
+        "backgound-color": "#FBF8F1",
+        "main-color": "#758FA3",
+        "sec-green": "#617F95",
         "third-green": "#424740",
       },
       fontFamily: {
-        titleFont: 'var(--cinzel-decorative)',
-        secTitleFont: 'var(--cinzel)',
-        textFont: 'var(--crimson)'
+        titleFont: ['Milan', 'serif'],
+        secTitleFont: ['Milan', 'serif'],
+        textFont: "var(--textFont)",
       }
     },
   },

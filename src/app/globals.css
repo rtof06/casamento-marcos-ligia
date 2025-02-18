@@ -3,22 +3,37 @@
 @tailwind utilities;
 
 @layer components {
-   .title {
-      @apply text-5xl py-2 font-secTitleFont max-md:pt-5 max-md:text-4xl 
-   }
+  .title {
+    @apply text-5xl py-2 font-secTitleFont max-md:pt-5 max-md:text-4xl;
+  }
 
-   .simple-text {
-      @apply text-3xl font-textFont
-   }
+  .simple-text {
+    @apply text-3xl font-textFont;
+  }
 
-   .page {
-      @apply hover:opacity-70 transition-all open:shadow-2xl shadow-backgound-color text-2xl max-sm:text-3xl
-   }
+  .page {
+    @apply hover:opacity-60 transition-all open:shadow-2xl shadow-backgound-color text-2xl max-sm:text-3xl;
+  }
 }
 
 @layer utilities {
-   .mask-gradient {
-     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%);
-     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 30%);
-   }
- }
+  .mask-gradient {
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 30%
+    );
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 30%
+    );
+  }
+}
+
+@font-face {
+  font-family: "Milan";
+  src: url("/fonts/Milan.ttf") format("ttf");
+  font-weight: 300;
+  font-style: normal;
+}

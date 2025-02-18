@@ -15,7 +15,7 @@ export default function infoCerimonia() {
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}>
       <section className="flex flex-col justify-center items-center">
-        <h1 className="title pt-10 pb-5 text-third-green text-center max-md:pt-20 max-md:pb-5 max-md:text-4xl">
+        <h1 className="title pt-10 pb-5 text-third-green text-center max-md:pt-20 max-md:pb-5 max-md:text-5xl">
           Informações da cerimônia
         </h1>
         <div className="py-8 w-full text-center flex flex-col  items-center text-white bg-main-color">
@@ -49,7 +49,7 @@ export default function infoCerimonia() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col justify-center items-center" id="confirmacao-presenca">
+      <section className="flex flex-col justify-center items-center pt-10" id="confirmacao-presenca">
         <h1 className="title py-5 text-center text-third-green">Confirmação de presença</h1>
         <BuscaConvidados />
       </section>

@@ -87,7 +87,7 @@ export default function Convidados() {
 
       {convidados.length > 0 && (
         <section className="flex flex-col items-center gap-4 mx-5">
-          <h1 className="font-titleFont font-bold">
+          <h1 className="font-titleFont font-bold text-4xl">
             Confirmados: {convidados.length}
           </h1>
           <div className="flex gap-2 justify-center items-center bg-main-color p-4 rounded-lg">

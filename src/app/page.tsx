@@ -1,5 +1,6 @@
 "use client"
 
+import logoNome from "../../public/img/LM - VERTICAL.png"
 import Image from "next/image";
 import fotoMenu from "../../public/img/foto-ligia-marcso.jpeg";
 import CasalTimeline from "@/components/Timeline/CasalTimeline";
@@ -13,14 +14,12 @@ export default function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}>
-      <section className="flex justify-around items-center p-8 max-sm:p-0 max-sm:flex-col h-screen">
-        <h1 className="font-titleFont text-6xl max-sm:text-center max-sm:text-7xl max-sm:pt-16">
-          Marcos & Lígia
-        </h1>
+      <section className="flex justify-center items-center p-8 max-sm:p-0 max-sm:flex-col h-screen">
+        <Image src={logoNome} alt="Nome Marcos & Lígia" className="max-sm:w-full"/>
         <Image
           src={fotoMenu}
           alt="Imagem de Marcos e Lígia se abraçando"
-          className="w-1/3 rounded-3xl max-sm:rounded-none max-sm:w-screen max-sm:mask-gradient"
+          className="w-1/3 rounded-3xl max-sm:rounded-none max-sm:w-full max-sm:mask-gradient"
         />
       </section>
       <div className="my-20 py-7 max-sm:my-0 bg-sec-green">

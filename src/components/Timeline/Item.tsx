@@ -21,7 +21,7 @@ export default function Item({ ano, titulo, media, texto }: ItemProps) {
   return (
     <>
       <TimelineSeparator>
-        <TimelineDot className="bg-main-color hover:p-2 shadow-lime-600 hover:shadow-2xl transition-all" />
+        <TimelineDot className="bg-sec-green hover:p-2 hover:shadow-2xl transition-all" />
         <TimelineConnector />
       </TimelineSeparator>
       <TimelineContent>
