@@ -3,6 +3,7 @@
 import Image from "next/image";
 import mapa from "../../../public/img/mapa.jpg";
 import rua from "../../../public/img/rua.png";
+import saoRoque from "../../../public/img/saoroque.jpeg";
 import fotoPresente from "../../../public/img/presente.jpeg";
 import BuscaConvidados from "@/components/BuscaConvidados/BuscaConvidados";
 import AumentarImagem from "@/components/Aumentar/AumentarImagem";
@@ -33,6 +34,36 @@ export default function infoCerimonia() {
                 <Image
                   src={mapa}
                   alt="Print da localização"
+                  className="rounded-xl hover:cursor-pointer shadow-2xl hover:shadow-black hover:shadow-md transition-all w-96 max-xl:w-screen"
+                />
+              </a>
+              <p className="font-textFont mt-4">
+                Clique no mapa para ir ao Google Maps e veja sua rota.
+              </p>
+            </figure>
+            <figure className="w-80 md:w-72 text-center max-md:flex max-md:flex-col max-md:items-center">
+              <AumentarImagem img={rua} alt="Foto da rua" />
+              <h2 className="text-xl font-textFont pt-4">
+                Henrique Restaurante - São Roque, SP
+              </h2>
+            </figure>
+          </div>
+        </div>
+        <div className="py-8 w-full text-center flex flex-col  items-center text-white bg-main-color">
+          <h1 className="title text-4xl">Sobre São Roque</h1>
+          <div className="flex items-center justify-center max-md:flex-col ">
+            <figure className="w-96 text-center p-6 max-md:flex max-md:flex-col max-md:items-center">
+              <h2 className="text-xl font-textFont">
+              Instagram da cidade para turismo
+              </h2>
+              <a
+                href="https://www.instagram.com/dicasdesaoroque?igsh=MWN3NW0yczBidHE4OA=="
+                target="__blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={saoRoque}
+                  alt="Imagem do centro de sao roque"
                   className="rounded-xl hover:cursor-pointer shadow-2xl hover:shadow-black hover:shadow-md transition-all w-96 max-xl:w-screen"
                 />
               </a>
