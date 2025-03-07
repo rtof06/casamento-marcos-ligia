@@ -25,9 +25,6 @@ export default function infoCerimonia() {
           <h1 className="title text-4xl">Local do evento</h1>
           <div className="flex items-center justify-center max-md:flex-col ">
             <figure className="w-96 text-center p-6 max-md:flex max-md:flex-col max-md:items-center">
-              <h2 className="text-xl font-textFont">
-                Estrada do Vinho (Spv-077), 10051 - Canguera, São Roque - SP
-              </h2>
               <a
                 href="https://www.google.com/maps/dir//Estrada+do+Vinho,+10051+-+Canguera,+S%C3%A3o+Roque+-+SP,+18145-002/@-23.5634688,-46.6583552,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x94cf736bf50bbbf5:0xb4cebfec2cba6833!2m2!1d-47.1564046!2d-23.6119997?entry=ttu&g_ep=EgoyMDI1MDIxMC4wIKXMDSoASAFQAw%3D%3D"
                 target="__blank"
@@ -39,6 +36,9 @@ export default function infoCerimonia() {
                   className="rounded-xl hover:cursor-pointer shadow-2xl hover:shadow-black hover:shadow-md transition-all w-96 max-xl:w-screen"
                 />
               </a>
+              <h2 className="text-xl font-textFont">
+                Estrada do Vinho (Spv-077), 10051 - Canguera, São Roque - SP
+              </h2>
               <p className="font-textFont mt-4">
                 Clique no mapa para ir ao Google Maps e veja sua rota.
               </p>
