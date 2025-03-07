@@ -55,9 +55,6 @@ export default function infoCerimonia() {
           <h1 className="title text-4xl">Sobre São Roque</h1>
           <div className="flex items-center justify-center max-md:flex-col ">
             <figure className="w-96 text-center p-6 max-md:flex max-md:flex-col max-md:items-center">
-              <h2 className="text-xl font-textFont">
-                Instagram da cidade para turismo
-              </h2>
               <a
                 href="https://www.instagram.com/dicasdesaoroque?igsh=MWN3NW0yczBidHE4OA=="
                 target="__blank"
@@ -69,15 +66,23 @@ export default function infoCerimonia() {
                   className="rounded-xl hover:cursor-pointer shadow-2xl hover:shadow-black hover:shadow-md transition-all w-96 max-xl:w-screen"
                 />
               </a>
+              <h2 className="text-xl font-textFont">
+                Instagram da cidade para turismo
+              </h2>
               <p className="font-textFont mt-4">
-                Clique no mapa para ir ao Google Maps e veja sua rota.
+                Clique na imagem para ir ao Instagram @dicasdesaoroque, para ver
+                pontos turísticos da cidade.
               </p>
             </figure>
             <figure className="w-80 md:w-72 text-center max-md:flex max-md:flex-col max-md:items-center">
               <AumentarImagem img={praca} alt="Foto da rua" />
-              <h2 className="text-xl font-textFont pt-4">Praça do centro de São Roque</h2>
+              <h2 className="text-xl font-textFont pt-4">
+                Praça do centro de São Roque
+              </h2>
               <a
                 className="font-textFont text-white underline"
+                target="__blank"
+                rel="noopener noreferrer"
                 href="https://www.google.com/maps/dir//Centro,+S%C3%A3o+Roque+-+SP,+18130-290/@-23.5305403,-47.2178983,33356m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x94cf0d553b3aaaab:0xa7dfd9bdabd1cd5d!2m2!1d-47.1354967!2d-23.530562?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D"
               >
                 Veja a rota no mapa para o local por aqui

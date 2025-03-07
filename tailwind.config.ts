@@ -12,7 +12,7 @@ const config: Config = {
         "backgound-color": "#FBF8F1",
         "main-color": "#758FA3",
         "sec-green": "#617F95",
-        "third-green": "#424740",
+        "third-green": "#2D3C46",
       },
       fontFamily: {
         titleFont: ['Milan', 'serif'],
