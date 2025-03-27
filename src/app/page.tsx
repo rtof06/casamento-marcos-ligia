@@ -3,10 +3,74 @@
 import logoNome from "../../public/img/LM - VERTICAL.png";
 import Image from "next/image";
 import fotoMenu from "../../public/img/foto-ligia-marcso.jpeg";
+import foto1 from "../../public/img/Ligia e Marcos-101.jpeg";
+import foto2 from "../../public/img/Ligia e Marcos-108.jpeg";
+import foto3 from "../../public/img/Ligia e Marcos-114.jpeg";
+import foto4 from "../../public/img/Ligia e Marcos-121.jpeg";
+import foto5 from "../../public/img/Ligia e Marcos-15.jpeg";
+import foto6 from "../../public/img/Ligia e Marcos-20.jpeg";
+import foto7 from "../../public/img/Ligia e Marcos-25.jpeg";
+import foto8 from "../../public/img/Ligia e Marcos-26.jpeg";
+import foto9 from "../../public/img/Ligia e Marcos-36.jpeg";
+import foto10 from "../../public/img/Ligia e Marcos-40.jpeg";
+import foto11 from "../../public/img/Ligia e Marcos-43.jpeg";
+import foto12 from "../../public/img/Ligia e Marcos-61.jpeg";
 import CasalTimeline from "@/components/Timeline/CasalTimeline";
 import Counter from "@/components/Counter/Counter";
+import Carrossel from "@/components/Carrossel/Carrossel";
 import { motion } from "framer-motion";
 import Link from "next/link";
+
+const imagens = [
+  {
+    src: foto1,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto2,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto3,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto4,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto5,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto6,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto7,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto8,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto9,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto10,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto11,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+  {
+    src: foto12,
+    alt: "Imagem de Marcos e Lígia se abraçando",
+  },
+];
 
 export default function Home() {
   return (
@@ -15,7 +79,7 @@ export default function Home() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <section className="flex justify-center items-center p-8 max-sm:p-0 max-sm:flex-col h-screen">
+      <section className="flex justify-between max-sm:justify-around items-center max-sm:flex-col h-screen max-sm:h-auto">
         <Image
           src={logoNome}
           alt="Nome Marcos & Lígia"
@@ -24,10 +88,10 @@ export default function Home() {
         <Image
           src={fotoMenu}
           alt="Imagem de Marcos e Lígia se abraçando"
-          className="w-1/3 rounded-3xl max-sm:rounded-none max-sm:w-full max-sm:mask-gradient"
+          className="w-3/5 mask-gradient-lg max-sm:rounded-none max-sm:w-full max-sm:mask-gradient-sm overflow-hidden"
         />
       </section>
-      <div className="my-20 py-7 max-sm:my-0 bg-sec-green">
+      <div className="my-20 py-7 max-sm:my-0 bg-sec-green relative z-10">
         <Counter />
       </div>
       <section>
@@ -39,6 +103,7 @@ export default function Home() {
         </p>
         <CasalTimeline />
       </section>
+      <Carrossel images={imagens} />
       <section className="flex justify-center items-center m-10">
         <Link
           href="/infos-cerimonia"
