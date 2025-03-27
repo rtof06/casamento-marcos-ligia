@@ -32,7 +32,7 @@
 
   .mask-gradient-lg {
     mask-image: linear-gradient(
-      to rignt,
+      to right,
       rgba(0, 0, 0, 0) 0%,
       rgba(0, 0, 0, 1) 20%
     );
