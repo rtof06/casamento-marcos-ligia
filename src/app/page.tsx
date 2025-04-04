@@ -91,8 +91,11 @@ export default function Home() {
           className="w-3/5 mask-gradient-lg max-sm:rounded-none max-sm:w-full max-sm:mask-gradient-sm overflow-hidden"
         />
       </section>
-      <div className="my-20 py-7 max-sm:my-0 bg-sec-green relative z-10">
+      <div className="my-20 py-7 max-sm:my-0 bg-sec-green relative z-10 flex justify-center items-center flex-col">
         <Counter />
+        <h1 className="bg-main-color p-5 rounded-md w-fit text-center text-3xl font-secTitleFont text-white mt-5">
+          09/08/2025 às 10h
+        </h1>
       </div>
       <section>
         <h1 className="title text-center text-third-green" id="historia-casal">
