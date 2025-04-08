@@ -23,7 +23,7 @@ export default function CasalTimeline() {
       <TimelineItem>
         <Item
           titulo="Amigos"
-          ano="2023"
+          ano="2022"
           media={{
             type: "image",
             src: fotoAmigo,
