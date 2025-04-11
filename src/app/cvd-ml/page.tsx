@@ -74,6 +74,8 @@ export default function Convidados() {
           type="password"
           id="senha"
           className="text-xl p-2 rounded-md"
+          maxLength={4}
+          inputMode="numeric"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
@@ -93,13 +95,13 @@ export default function Convidados() {
           <div className="flex gap-2 justify-center items-center bg-main-color p-4 rounded-lg">
             <label
               htmlFor="buscarConvidado"
-              className="font-secTitleFont text-white text-xl"
+              className="font-textFont text-white text-xl"
             >
               Buscar nome:
             </label>
             <input
               type="search"
-              className="border p-2 rounded-md"
+              className="border p-2 rounded-md font-textFont"
               id="buscarConvidado"
               value={filtro}
               onChange={(e) => setFiltro(e.target.value)}
@@ -112,9 +114,9 @@ export default function Convidados() {
               convidadosFiltrados.map((convidado) => (
                 <div
                   key={convidado.id}
-                  className="flex flex-col bg-main-color p-4 rounded-lg text-center"
+                  className="flex flex-col bg-main-color p-4 rounded-lg text-center font-textFont"
                 >
-                  <p className="text-white font-bold text-lg">
+                  <p className="text-white font-bold text-xl">
                     {convidado.nome}
                   </p>
                   <p className="text-white text-xl max-md:text-lg">📞 {convidado.telefone}</p>
