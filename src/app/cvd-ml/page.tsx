@@ -107,7 +107,7 @@ export default function Convidados() {
           </div>
 
           {/* Grid de convidados filtrados */}
-          <div className="grid grid-cols-3 gap-5">
+          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2">
             {convidadosFiltrados.length > 0 ? (
               convidadosFiltrados.map((convidado) => (
                 <div
@@ -117,7 +117,7 @@ export default function Convidados() {
                   <p className="text-white font-bold text-lg">
                     {convidado.nome}
                   </p>
-                  <p className="text-white text-xl">📞 {convidado.telefone}</p>
+                  <p className="text-white text-xl max-md:text-lg">📞 {convidado.telefone}</p>
                   <p className="text-white">
                     ✅ Confirmado em: {formatarData(convidado.dataConfirmacao)}
                   </p>
