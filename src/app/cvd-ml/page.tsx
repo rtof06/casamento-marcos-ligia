@@ -108,7 +108,7 @@ export default function Convidados() {
             />
           </div>
 
-          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2 my-5">
+          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2 max-sm:flex max-sm:flex-col my-5">
             {convidadosFiltrados.length > 0 ? (
               convidadosFiltrados.map((convidado) => (
                 <div

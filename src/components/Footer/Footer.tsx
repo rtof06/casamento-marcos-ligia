@@ -3,7 +3,7 @@ import logoInsta from "../../../public/img/Instagram_icon.png";
 
 export default function Footer() {
   return (
-    <footer className="flex bg-main-color text-white p-4 font-textFont justify-center">
+    <footer className="flex bg-main-color text-white p-4 mt-4 font-textFont justify-center">
       <div className="redes flex flex-col text-center justify-center items-center">
         <p className="text-2xl">Redes sociais:</p>
         <div className="links flex gap-4 py-2 items-center justify-center">
