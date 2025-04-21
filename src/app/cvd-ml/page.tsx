@@ -7,7 +7,7 @@ interface Convidado {
   id: string;
   nome: string;
   telefone: string;
-  dataConfirmacao?: string; // Pode ser opcional
+  dataConfirmacao?: string;
 }
 
 export default function Convidados() {
@@ -108,8 +108,7 @@ export default function Convidados() {
             />
           </div>
 
-          {/* Grid de convidados filtrados */}
-          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2">
+          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2 my-5">
             {convidadosFiltrados.length > 0 ? (
               convidadosFiltrados.map((convidado) => (
                 <div
