@@ -15,7 +15,7 @@ export default function CasalTimeline() {
           ano="2006"
           media={{
             type: "image",
-            src: fotoKid, // Caminho da imagem
+            src: fotoKid,
           }}
           texto="Observe bem esta foto. Observou? Agora identifique um moleque saindo do meio mato e uma menina de regata laranja. Esses são o Marcos e a Lígia."
         />
@@ -47,13 +47,13 @@ export default function CasalTimeline() {
       <TimelineItem>
         <Item
           titulo="Pedido de Casamento"
-          ano="2025"
+          ano="2024"
           media={{
             type: "video",
             src: "/media/video-pedido.mp4",
             poster: "/img/foto-alianca-perto.jpeg",
           }}
-          texto="Um vídeo especial comemorando o noivado do casal, com momentos marcantes de sua jornada."
+          texto="Um vídeo especial do dia do pedido de casamento. O Marcos fez o pedido dentro do link, pequeno grupo de oração nos lares dos membros da Zion, igreja deles."
         />
       </TimelineItem>
       <TimelineItem>
