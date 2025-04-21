@@ -135,11 +135,11 @@ export default function BuscaConvidados() {
       {mensagem.includes("confirmada") && (
           <a
             href={`https://wa.me/5511932773883?text=Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${nome}.`}
-            className="bg-red-500 rounded-lg p-3 font-secTitleFont text-white"
+            className="bg-red-500 rounded-lg p-3 font-secTitleFont text-white font-extrabold"
             target="_blank"
             rel="noopener noreferrer"
           >
-             Não foi redirecionado? Clique aqui!
+             Não foi redirecionado para o WhatsApp? Clique aqui!
           </a>
       )}
     </div>
