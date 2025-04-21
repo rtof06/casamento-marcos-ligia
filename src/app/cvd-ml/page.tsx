@@ -55,7 +55,7 @@ export default function Convidados() {
   );
 
   return (
-    <main className="flex justify-center items-center h-screen">
+    <main className={autenticado ? `flex justify-center items-center` : `flex justify-center items-center h-screen`}>
       <form
         className={
           autenticado
@@ -88,14 +88,14 @@ export default function Convidados() {
       </form>
 
       {convidados.length > 0 && (
-        <section className="flex flex-col items-center gap-4 mx-5">
+        <section className="flex flex-col items-center gap-4 mx-5 mt-20">
           <h1 className="font-titleFont font-bold text-4xl">
             Confirmados: {convidados.length}
           </h1>
           <div className="flex gap-2 justify-center items-center bg-main-color p-4 rounded-lg">
             <label
               htmlFor="buscarConvidado"
-              className="font-textFont text-white text-xl"
+              className="font-textFont text-white text-xl max-sm:text-base"
             >
               Buscar nome:
             </label>
@@ -108,18 +108,18 @@ export default function Convidados() {
             />
           </div>
 
-          <div className="grid grid-cols-3 gap-5 max-md:grid-cols-2 max-sm:flex max-sm:flex-col my-5">
+          <div className="grid grid-cols-3 gap-5 max-sm:gap-2 max-md:grid-cols-2 my-5">
             {convidadosFiltrados.length > 0 ? (
               convidadosFiltrados.map((convidado) => (
                 <div
                   key={convidado.id}
                   className="flex flex-col bg-main-color p-4 rounded-lg text-center font-textFont"
                 >
-                  <p className="text-white font-bold text-xl">
+                  <p className="text-white font-bold text-xl max-sm:text-base">
                     {convidado.nome}
                   </p>
-                  <p className="text-white text-xl max-md:text-lg">📞 {convidado.telefone}</p>
-                  <p className="text-white">
+                  <p className="text-white text-xl max-md:text-lg max-sm:text-base">📞 {convidado.telefone}</p>
+                  <p className="text-white max-sm:text-base">
                     ✅ Confirmado em: {formatarData(convidado.dataConfirmacao)}
                   </p>
                 </div>
