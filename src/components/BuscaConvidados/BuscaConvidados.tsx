@@ -46,6 +46,11 @@ export default function BuscaConvidados() {
       return;
     }
 
+    if (telefone.length < 15) {
+      setMensagem("Por favor, preencha corretamente o número de telefone.");
+      return;
+    }
+
     try {
       const db = getDatabase(app);
       const convidadosRef = ref(db, "convidados");
@@ -126,7 +131,7 @@ export default function BuscaConvidados() {
       {mensagem && (
         <p
           className={`m-3 p-3 rounded-lg font-textFont text-white shadow-2xl ${
-            mensagem.includes("erro") || mensagem.includes("campos")
+            mensagem.includes("erro") || mensagem.includes("Por favor,")
               ? "bg-red-600"
               : "bg-green-600"
           }`}

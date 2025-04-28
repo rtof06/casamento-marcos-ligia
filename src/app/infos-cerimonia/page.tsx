@@ -48,11 +48,11 @@ export default function infoCerimonia() {
               <h2 className="text-xl font-textFont pt-4">
                 Henrique Restaurante - São Roque, SP
               </h2>
-              <h1 className="bg-main-color p-5 rounded-md w-fit text-center text-3xl font-secTitleFont text-white mt-5">
-                09/08/2025 às 10h
-              </h1>
             </figure>
           </div>
+          <h1 className="bg-main-color p-5 rounded-md w-fit text-center text-3xl font-secTitleFont text-white mt-5">
+            09/08/2025 às 10h
+          </h1>
         </div>
         <div className="py-8 w-full text-center flex flex-col  items-center text-white bg-main-color">
           <h1 className="title text-4xl">Sobre São Roque</h1>
