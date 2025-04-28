@@ -95,6 +95,7 @@ export default function BuscaConvidados() {
         name="nome"
         id="nome"
         value={nome}
+        required
         onChange={(e) => setNome(e.target.value.toUpperCase())}
         className="p-2 rounded-md border-2 border-sec-green font-textFont text-black w-full"
       />
@@ -110,6 +111,7 @@ export default function BuscaConvidados() {
         maxLength={15}
         pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"
         onChange={handleChange}
+        required
         className="p-2 rounded-md border-2 font-textFont text-xl border-sec-green text-black w-full"
       />
 
