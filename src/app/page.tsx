@@ -106,7 +106,7 @@ export default function Home() {
         </p>
         <CasalTimeline />
       </section>
-      <Carrossel images={imagens} />
+      <Carrossel images={imagens}/>
       <section className="flex justify-center items-center m-10">
         <Link
           href="/infos-cerimonia"
