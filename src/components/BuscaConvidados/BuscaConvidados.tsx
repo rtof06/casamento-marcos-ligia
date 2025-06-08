@@ -52,39 +52,39 @@ export default function BuscaConvidados() {
     }
 
     try {
-      const db = getDatabase(app);
-      const convidadosRef = ref(db, "convidados");
+    const db = getDatabase(app);
+    const convidadosRef = ref(db, "convidados");
 
-      const consulta = query(
-        convidadosRef,
-        orderByChild("nome"),
-        equalTo(nome)
-      );
-      const snapshot = await get(consulta);
+    const consulta = query(
+      convidadosRef,
+      orderByChild("nome"),
+      equalTo(nome)
+    );
+    const snapshot = await get(consulta);
 
-      if (snapshot.exists()) {
-        setMensagem("Você já confirmou sua presença!");
-      } else {
-        await push(convidadosRef, {
-          nome,
-          telefone,
-          confirmado: true,
-          dataConfirmacao: new Date().toISOString(),
-        });
+    if (snapshot.exists()) {
+      setMensagem("Você já confirmou sua presença!");
+    } else {
+      await push(convidadosRef, {
+        nome,
+        telefone,
+        confirmado: true,
+        dataConfirmacao: new Date().toISOString(),
+      });
 
-        const whatsAppMessage = `Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${encodeURIComponent(
-          nome
-        )}.`;
-        const whatsAppLink = `https://wa.me/5511930955052?text=${whatsAppMessage}`;
+          const whatsAppMessage = `Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${encodeURIComponent(
+            nome
+          )}.`;
+          const whatsAppLink = `https://wa.me/5511930955052?text=${whatsAppMessage}`;
 
-        window.open(whatsAppLink, "_blank");
+          window.open(whatsAppLink, "_blank");
 
-        setMensagem("Presença confirmada com sucesso!");
+          setMensagem("Presença confirmada com sucesso!");
+        }
+      } catch (error) {
+        console.error("Erro ao confirmar presença:", error);
+        setMensagem("Ocorreu um erro. Tente novamente.");
       }
-    } catch (error) {
-      console.error("Erro ao confirmar presença:", error);
-      setMensagem("Ocorreu um erro. Tente novamente.");
-    }
   };
 
   return (
@@ -140,14 +140,14 @@ export default function BuscaConvidados() {
         </p>
       )}
       {mensagem.includes("confirmada") && (
-          <a
-            href={`https://wa.me/5511930955052?text=Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${nome}.`}
-            className="bg-red-500 rounded-lg p-3 font-secTitleFont text-white font-extrabold"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-             Não foi redirecionado para o WhatsApp? Clique aqui!
-          </a>
+        <a
+          href={`https://wa.me/5511930955052?text=Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${nome}.`}
+          className="bg-red-500 rounded-lg p-3 font-secTitleFont text-white font-extrabold"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Não foi redirecionado para o WhatsApp? Clique aqui!
+        </a>
       )}
     </div>
   );
