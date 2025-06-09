@@ -51,40 +51,40 @@ export default function BuscaConvidados() {
       return;
     }
 
-    try {
-    const db = getDatabase(app);
-    const convidadosRef = ref(db, "convidados");
+      try {
+      const db = getDatabase(app);
+      const convidadosRef = ref(db, "convidados");
 
-    const consulta = query(
-      convidadosRef,
-      orderByChild("nome"),
-      equalTo(nome)
-    );
-    const snapshot = await get(consulta);
+      const consulta = query(
+        convidadosRef,
+        orderByChild("nome"),
+        equalTo(nome)
+      );
+      const snapshot = await get(consulta);
 
-    if (snapshot.exists()) {
-      setMensagem("Você já confirmou sua presença!");
-    } else {
-      await push(convidadosRef, {
-        nome,
-        telefone,
-        confirmado: true,
-        dataConfirmacao: new Date().toISOString(),
-      });
+      if (snapshot.exists()) {
+        setMensagem("Você já confirmou sua presença!");
+      } else {
+        await push(convidadosRef, {
+          nome,
+          telefone,
+          confirmado: true,
+          dataConfirmacao: new Date().toISOString(),
+        });
 
-          const whatsAppMessage = `Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${encodeURIComponent(
-            nome
-          )}.`;
-          const whatsAppLink = `https://wa.me/5511930955052?text=${whatsAppMessage}`;
+            const whatsAppMessage = `Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${encodeURIComponent(
+              nome
+            )}.`;
+            const whatsAppLink = `https://wa.me/5511930955052?text=${whatsAppMessage}`;
 
-          window.open(whatsAppLink, "_blank");
+            window.open(whatsAppLink, "_blank");
 
-          setMensagem("Presença confirmada com sucesso!");
+            setMensagem("Presença confirmada com sucesso!");
+          }
+        } catch (error) {
+          console.error("Erro ao confirmar presença:", error);
+          setMensagem("Ocorreu um erro. Tente novamente.");
         }
-      } catch (error) {
-        console.error("Erro ao confirmar presença:", error);
-        setMensagem("Ocorreu um erro. Tente novamente.");
-      }
   };
 
   return (

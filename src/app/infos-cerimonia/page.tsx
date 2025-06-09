@@ -111,26 +111,26 @@ export default function infoCerimonia() {
             href="https://www.mercadolivre.com.br/presentes/casamento-ligia-e-marcos-s6yvp"
             target="__blank"
             rel="noopener noreferrer"
-            className="flex flex-col items-center bg-sec-green p-5 rounded-t-2xl hover:shadow-2xl transition-all w-1/3"
+            className="flex flex-col items-center bg-sec-green p-5 rounded-t-2xl hover:shadow-2xl max-xl:w-80 transition-all w-1/3"
           >
             <Image
               src={fotoPresente}
               alt="Foto de um presente"
               width={200}
               height={200}
-              className="rounded-xl shadow-2xl hover:animate-pulse"
+              className="rounded-xl shadow-2xl animate-pulse"
             />
-            <h2 className="font-textFont text-2xl pt-2 text-backgound-color text-center">
+            <h2 className="font-textFont text-2xl pt-2 text-backgound-color text-center animate-pulse">
               Lista de Presentes no Mercado Livre
             </h2>
           </a>
-          <div className="flex flex-col items-center bg-sec-green p-5 rounded-b-2xl w-1/3">
+          <div className="flex flex-col items-center bg-sec-green p-5 rounded-b-2xl max-xl:w-80 w-1/3">
             <figure className="flex flex-col items-center">
               <h2 className="font-textFont text-2xl pb-2 text-backgound-color text-center">
                 Chave PIX:
               </h2>
-              <Image src={pix} alt="QR Code PIX" />
-              <h1 className="font-textFont text-3xl py-2 text-backgound-color text-center">
+              <Image src={pix} alt="QR Code PIX" className="max-md:w-1/2" />
+              <h1 className="font-textFont text-3xl max-xl:text-base py-2 text-backgound-color text-center">
                 casamentoligiaemarcos@gmail.com
               </h1>
             </figure>
