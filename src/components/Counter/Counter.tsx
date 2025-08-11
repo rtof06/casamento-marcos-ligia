@@ -6,7 +6,7 @@ export default function Counter() {
 
   return (
     <section className="text-backgound-color">
-      <h1 className="title text-center">Para esse dia especial, faltam...</h1>
+      <h1 className="title text-center">Os noivos casaram faz...</h1>
       <div className="flex text-center justify-center items-center gap-4">
         <div>
           <div className="bg-main-color p-3 rounded-lg font-textFont text-2xl">{day}</div>

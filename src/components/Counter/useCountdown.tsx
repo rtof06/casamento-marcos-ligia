@@ -12,7 +12,7 @@ export default function useCountdown(date: string) {
       const countDate = new Date(date).getTime();
       const now = new Date().getTime();
 
-      const interval = countDate - now;
+      const interval = now - countDate;
 
       const second = 1000;
       const minute = second * 60;

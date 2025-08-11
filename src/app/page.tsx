@@ -108,6 +108,14 @@ export default function Home() {
       </section>
       <Carrossel images={imagens}/>
       <section className="flex justify-center items-center m-10">
+        <a
+          href="https://photos.app.goo.gl/ZZMTm468AjKhyfXt8"
+          className="bg-sec-green p-5 text-2xl text-center max-sm:text-lg rounded-xl text-white font-secTitleFont hover:bg-third-green transition-all"
+        >
+          Veja as fotos compartilhadas da cerimônia por aqui!
+        </a>
+      </section>
+      <section className="flex justify-center items-center m-10">
         <Link
           href="/infos-cerimonia"
           className="bg-sec-green p-5 text-2xl text-center max-sm:text-lg rounded-xl text-white font-secTitleFont hover:bg-third-green transition-all"

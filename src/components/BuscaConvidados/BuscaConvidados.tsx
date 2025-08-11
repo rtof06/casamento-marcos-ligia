@@ -71,19 +71,11 @@ export default function BuscaConvidados() {
           confirmado: true,
           dataConfirmacao: new Date().toISOString(),
         });
-
-            const whatsAppMessage = `Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${encodeURIComponent(
-              nome
-            )}.`;
-            const whatsAppLink = `https://wa.me/5511930955052?text=${whatsAppMessage}`;
-
-            window.open(whatsAppLink, "_blank");
-
-            setMensagem("Presença confirmada com sucesso!");
+            setMensagem("O casamento já foi! Obrigado pela presença :)");
           }
         } catch (error) {
           console.error("Erro ao confirmar presença:", error);
-          setMensagem("Ocorreu um erro. Tente novamente.");
+          setMensagem("Ocorreu um erro... Mas não fique triste. O casamento já foi! :)");
         }
   };
 
@@ -138,16 +130,6 @@ export default function BuscaConvidados() {
         >
           {mensagem}
         </p>
-      )}
-      {mensagem.includes("confirmada") && (
-        <a
-          href={`https://wa.me/5511930955052?text=Olá! Gostaria de confirmar minha presença no casamento do Marcos e da Lígia. Meu nome é ${nome}.`}
-          className="bg-red-500 rounded-lg p-3 font-secTitleFont text-white font-extrabold"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Não foi redirecionado para o WhatsApp? Clique aqui!
-        </a>
       )}
     </div>
   );
