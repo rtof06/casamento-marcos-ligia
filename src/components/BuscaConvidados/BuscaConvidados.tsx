@@ -1,15 +1,5 @@
 "use client";
 import { useState } from "react";
-import {
-  getDatabase,
-  ref,
-  query,
-  orderByChild,
-  equalTo,
-  get,
-  push,
-} from "firebase/database";
-import { app } from "../../../services/firebaseConfig";
 import Image from "next/image";
 import whats from "../../../public/img/whatsapp--v5.png";
 
@@ -52,13 +42,7 @@ export default function BuscaConvidados() {
     }
 
       try {
-
-      if (snapshot.exists()) {
-        setMensagem("Você já confirmou sua presença!");
-      } else {
-       
             setMensagem("O casamento já foi! Obrigado pela presença :)");
-          }
         } catch (error) {
           console.error("Erro ao confirmar presença:", error);
           setMensagem("Ocorreu um erro... Mas não fique triste. O casamento já foi! :)");
