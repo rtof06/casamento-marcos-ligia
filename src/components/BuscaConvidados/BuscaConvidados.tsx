@@ -52,25 +52,11 @@ export default function BuscaConvidados() {
     }
 
       try {
-      const db = getDatabase(app);
-      const convidadosRef = ref(db, "convidados");
-
-      const consulta = query(
-        convidadosRef,
-        orderByChild("nome"),
-        equalTo(nome)
-      );
-      const snapshot = await get(consulta);
 
       if (snapshot.exists()) {
         setMensagem("Você já confirmou sua presença!");
       } else {
-        await push(convidadosRef, {
-          nome,
-          telefone,
-          confirmado: true,
-          dataConfirmacao: new Date().toISOString(),
-        });
+       
             setMensagem("O casamento já foi! Obrigado pela presença :)");
           }
         } catch (error) {
